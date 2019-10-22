@@ -65,7 +65,7 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Js With initialisations For Demo Purpose, Don't Include it in Your Project -->
   <script src="{{ asset('assets/site/demo/demo.js') }}" type="text/javascript"></script>
-  <script src="{{ asset('assets/site/js/material-kit.min1036.js?v=2.1.1') }}" type="text/javascript"></script>
+  <script src="{{ asset('assets/site/js/material-kit.min1036.js') }}" type="text/javascript"></script>
 
 
    <script>
