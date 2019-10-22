@@ -24,11 +24,11 @@
                         </a>
                       </li>
                       
-                      <li>
+                     {{--  <li>
                         <a href="{{ route('contact')}}">
                           Contact Us
                         </a>
-                      </li>
+                      </li> --}}
                     </ul>
                   </div>
                 {{--   <div class="col-md-2">
