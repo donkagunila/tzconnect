@@ -3,9 +3,11 @@
 
 /* --------------------- Common/User Routes START -------------------------------- */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'SiteController@index')->name('index');
+Route::get('/about-us', 'SiteController@about')->name('about');
+Route::get('/contact-us', 'SiteController@contact')->name('contact');
+
+Route::get('blog', 'BlogController@index')->name('blog');
 
 Auth::routes([ 'verify' => true ]);
 
