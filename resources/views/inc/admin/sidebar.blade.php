@@ -6,10 +6,10 @@
       -->
       <div class="logo">
         <a href="{{ route('admin.home')}}" class="simple-text logo-mini">
-          PN
+          TC
         </a>
         <a href="{{ route('admin.home')}}" class="simple-text logo-normal">
-          Project Name
+          TZ Connect
         </a>
       </div>
       <div class="sidebar-wrapper">
