@@ -52,6 +52,8 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function(){
 
     //Put all of your admin routes here...
 
+
+    // user routes
     Route::prefix('user')->group(function ()
     {
        Route::get('list', 'UserController@index')->name('user.list');
