@@ -16,7 +16,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'type',
     ];
 
     /**
@@ -36,4 +36,38 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public static function checktype($type)
+    {
+        switch ($type) {
+            case 1:
+                return 'User';
+                break;
+            case 2:
+                return 'Vendor';
+                break;
+            
+            default:
+                return 'User';
+                break;
+        }
+    }
+
+
+    public static function checkstatus($status)
+    {
+        switch ($status) {
+            case 1:
+                return 'Active';
+                break;
+            case 2:
+                return 'In Active';
+                break;
+            
+            default:
+                return 'Active';
+                break;
+        }
+    }
 }

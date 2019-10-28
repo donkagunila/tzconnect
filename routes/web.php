@@ -13,6 +13,19 @@ Auth::routes([ 'verify' => true ]);
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 
+
+// Events pages routes
+Route::prefix('/events')->name('event.')->group(function () {
+
+    Route::get('/weddings', 'EventController@weddings')->name('weddings');
+    Route::get('/seminars', 'EventController@seminars')->name('seminars');
+    Route::get('/concerts', 'EventController@concerts')->name('concerts');
+    Route::get('/all', 'EventController@all')->name('all');
+
+});
+
+
+
 /* --------------------- Common/User Routes END -------------------------------- */
 
 /* ----------------------- Admin Routes START -------------------------------- */
@@ -50,6 +63,17 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function(){
 
     Route::get('/dashboard','HomeController@index')->name('home')->middleware('guard.verified:admin,admin.verification.notice');
 
+    Route::prefix('/event')->name('event.')->namespace('Event')->group(function(){
+        // event routes
+        Route::get('/categories', 'EventController@category')->name('categories');
+         Route::get('/all', 'EventController@index')->name('all');
+
+        // category routes
+        // Route::get('/')
+    });
+
+    Route::get('/service/all', 'EventController@services')->name('service.all');
+
     //Put all of your admin routes here...
 
 
@@ -57,7 +81,11 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function(){
     Route::prefix('user')->group(function ()
     {
        Route::get('list', 'UserController@index')->name('user.list');
-       Route::get('add', 'UserController@create')->name('user.add');
+       Route::post('add', 'UserController@create')->name('user.add');
+       Route::get('edit/{user}', 'UserController@edit')->name('user.edit');
+       Route::post('update/{user}', 'UserController@update')->name('user.update');
+       
+        Route::get('vendors', 'UserController@vendors')->name('user.vendors');
     });
 
 });

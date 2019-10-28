@@ -1,8 +1,10 @@
 @extends('layouts.admin')
 
-@section('title', 'Dashboard | Admin')
+@section('title', 'User List | Admin')
 
 @section('content')
+
+
 <div class="content">
 	<div class="container-fluid">
 		<div class="row">
@@ -28,49 +30,39 @@
 							<table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
 								 <thead>
 			                        <tr>
-			                          <th>Name</th>
-			                          <th>Position</th>
-			                          <th>Office</th>
-			                          <th>Age</th>
-			                          <th>Date</th>
+			                          <th>Username</th>
+			                          <th>Email</th>
+			                          <th>Role</th>
+			                          <th>Registered</th>
+			                          <th>Status</th>
 			                          <th class="disabled-sorting text-right">Actions</th>
 			                        </tr>
 			                      </thead>
 			                      <tfoot>
 			                        <tr>
-			                          <th>Name</th>
-			                          <th>Position</th>
-			                          <th>Office</th>
-			                          <th>Age</th>
-			                          <th>Start date</th>
+			                          <th>Username</th>
+			                          <th>Email</th>
+			                          <th>Role</th>
+			                          <th>Registered</th>
+			                          <th>Status</th>
 			                          <th class="text-right">Actions</th>
 			                        </tr>
 			                      </tfoot>
 			                       <tbody>
+
+			                       	@foreach($users as $user)
 				                        <tr>
-				                          <td>Tiger Nixon</td>
-				                          <td>System Architect</td>
-				                          <td>Edinburgh</td>
-				                          <td>61</td>
-				                          <td>2011/04/25</td>
+				                          <td>{{ $user->name}}</td>
+				                          <td>{{ $user->email }}</td>
+				                          <td>{{ App\User::checktype($user->type) }}</td>
+				                          <td>{{ $user->created_at->toDateString() }}</td>
+				                          <td>{{ App\User::checkstatus($user->status) }}</td>
 				                          <td class="text-right">
-				                            <a href="#" class="btn btn-link btn-info btn-just-icon like"><i class="material-icons">favorite</i></a>
-				                            <a href="#" class="btn btn-link btn-warning btn-just-icon edit"><i class="material-icons">dvr</i></a>
-				                            <a href="#" class="btn btn-link btn-danger btn-just-icon remove"><i class="material-icons">close</i></a>
+				                            <a href="{{ route('admin.user.edit', $user->id)}}" class="btn btn-link btn-warning btn-just-icon edit"><i class="material-icons">edit</i></a>
+				                            {{-- <a href="#" class="btn btn-link btn-danger btn-just-icon remove"><i class="material-icons">close</i></a> --}}
 				                          </td>
 				                        </tr>
-				                        <tr>
-				                          <td>Tiger Nixon</td>
-				                          <td>System Architect</td>
-				                          <td>Edinburgh</td>
-				                          <td>61</td>
-				                          <td>2011/04/25</td>
-				                          <td class="text-right">
-				                            <a href="#" class="btn btn-link btn-info btn-just-icon like"><i class="material-icons">favorite</i></a>
-				                            <a href="#" class="btn btn-link btn-warning btn-just-icon edit"><i class="material-icons">dvr</i></a>
-				                            <a href="#" class="btn btn-link btn-danger btn-just-icon remove"><i class="material-icons">close</i></a>
-				                          </td>
-				                        </tr>
+				                     @endforeach
 				                    </tbody>
 							</table>
 						</div>

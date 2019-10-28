@@ -1,4 +1,4 @@
-  <nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top  navbar-expand-lg " color-on-scroll="100" id="sectionsNav">
+  <nav class="navbar navbar-color-on-scrol bg-light fixed-top  navbar-expand-lg " color-on-scroll="100" id="sectionsNav">
     <div class="container">
       <div class="navbar-translate">
         <a class="navbar-brand" href="{{ route('index') }} ">
@@ -39,15 +39,20 @@
               <i class="material-icons">view_carousel</i> Events
             </a>
             <div class="dropdown-menu dropdown-with-icons">
-              <a href="#" class="dropdown-item">
-                <i class="material-icons">account_balance</i> Corporate events
+              <a href="{{ route('event.weddings')}}" class="dropdown-item">
+                <i class="material-icons">account_balance</i> Weddings
               </a>
               <a href="#" class="dropdown-item">
-                <i class="material-icons">art_track</i> Individuals
+                <i class="material-icons">art_track</i> Seminar
               </a>
               <a href="#" class="dropdown-item">
-                <i class="material-icons">view_quilt</i> Archive
+                <i class="material-icons">view_quilt</i> Concert
               </a>
+
+               <a href="#" class="dropdown-item">
+                <i class="material-icons">view_quilt</i> All Events
+              </a>
+
             </div>
           </li>
           

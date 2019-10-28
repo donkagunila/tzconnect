@@ -16,60 +16,77 @@
       </div>
     </div>
   </div>
-	
 
-	<div class="main">
-		<div class="container">
-			<section>
-				<div class="about-services features-2">
-        <div class="row">
-          <div class="col-md-8 ml-auto mr-auto text-center">
-            <h2 class="title">We Connect the best</h2>
-            <h5 class="description">We are a group of enthusiasts who came together to close the berrier between a customer and a service, we bring together all kinds of services related to events and ceremonies</h5>
+
+  <div class="main">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+            <section class="py-8 py-md-11 border-bottom">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8 text-center">
+            
+            <!-- Headin -->
+            <h1 class="display-2">
+              Small team. Big hearts.
+            </h1>
+
+            <!-- Text -->
+            <p class="lead text-muted mb-7 mb-md-9">
+              Our focus is always on finding the best people to work with. Our bar is high, but you look ready to take on the challenge.
+            </p>
+
           </div>
-        </div>
+        </div> <!-- / .row -->
         <div class="row">
-          <div class="col-md-4">
-            <div class="info info-horizontal">
-              <div class="icon icon-rose">
-                <i class="material-icons">gesture</i>
-              </div>
-              <div class="description">
-                <h4 class="info-title">1. Connect</h4>
-                <p>we bring together all kinds of services related to events and ceremonies and get you the easiest way you can plan</p>
+          <div class="col-12">
+            
+            <!-- Image -->
+            <div class="form-row">
+              <div class="col-4">
                 
+                <img src="assets/img/photos/photo-16.jpg" class="img-fluid rounded shadow-lg" alt="...">
+
+              </div>
+              <div class="col-3">
+
+                <img src="assets/img/photos/photo-17.jpg" class="img-fluid rounded shadow-lg mb-4" alt="...">
+
+                <img src="assets/img/photos/photo-18.jpg" class="img-fluid rounded shadow-lg mt-1" alt="...">
+
+              </div>
+              <div class="col-5">
+
+                <div class="form-row mb-4">
+                  <div class="col-5">
+                    
+                    <img src="assets/img/photos/photo-19.jpg" class="img-fluid rounded shadow-lg" alt="...">
+
+                  </div>
+                  <div class="col-7">
+                    
+                    <img src="assets/img/photos/photo-20.jpg" class="img-fluid rounded shadow-lg" alt="...">
+
+                  </div>
+                </div> <!-- / .row -->
+
+                <img src="assets/img/photos/photo-21.jpg" class="img-fluid rounded shadow-lg mt-1" alt="...">
+
               </div>
             </div>
+
           </div>
-          <div class="col-md-4">
-            <div class="info info-horizontal">
-              <div class="icon icon-rose">
-                <i class="material-icons">build</i>
-              </div>
-              <div class="description">
-                <h4 class="info-title">2. Develop</h4>
-                <p>We develop a sense of belonging we bring together all kinds of services related to events and ceremonies</p>
-               
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="info info-horizontal">
-              <div class="icon icon-rose">
-                <i class="material-icons">mode_edit</i>
-              </div>
-              <div class="description">
-                <h4 class="info-title">3. Inspire</h4>
-                <p>we bring together all kinds of services related to events and ceremonies, with a tone of inspirations we give you the best</p>
-               
-              </div>
-            </div>
-          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
         </div>
       </div>
-			</section>
-		</div>
-	</div>
+    </div>
+  </div>
+	
+
+	
 
 	
 @endsection

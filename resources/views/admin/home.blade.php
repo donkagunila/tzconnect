@@ -21,7 +21,7 @@
                               <div class="card-footer">
                                 <div class="stats">
                                   <i class="material-icons text-primary">add</i>
-                                  <a href="{{ route('admin.user.add')}}">Add Users</a>
+                                  <a href="#" data-toggle="modal" data-target="#exampleModal">Add Users</a>
                                 </div>
                               </div>
                             </div>
@@ -31,14 +31,4 @@
       	</div>
    </div>
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Admin Dashboard</div>
-                <div class="card-body">You are logged in!</div>
-            </div>
-        </div>
-    </div>
-</div>
 @endsection
