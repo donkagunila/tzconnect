@@ -32,7 +32,7 @@
                               <tr>
                                 <th>Title</th>
                                 <th>Description</th>
-                                <th>Created</th>
+                                <th>Date Created</th>
                                 <th>Status</th>
                                 <th class="disabled-sorting text-right">Actions</th>
                               </tr>
@@ -41,7 +41,7 @@
                               <tr>
                                <th>Title</th>
                                 <th>Description</th>
-                                <th>Created</th>
+                                <th>Date Created</th>
                                 <th>Status</th>
                                 <th class="text-right">Actions</th>
                               </tr>
