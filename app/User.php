@@ -70,4 +70,10 @@ class User extends Authenticatable implements MustVerifyEmail
                 break;
         }
     }
+
+
+    public function UserActivity()
+    {
+        return $this->hasMany(UserActivity::class);
+    }
 }

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use App\User;
+use App\UserActivity;
 
 
 class UserController extends Controller
@@ -27,19 +28,25 @@ class UserController extends Controller
     {
     	// return view('admin.user.create');
 
-    	User::create([
+    	$user = User::create([
     		'name' => request('name'),
     		'email' => request('email'),
     		'password'=> Hash::make(request('password')),
     		'type' => request('type'),
     	]);
 
+        UserActivity::addActivity($user->id, 'User Created');
+
     	return redirect()->back();
     }
 
     public function edit(User $user)
     {
-        return view('admin.user.edit', compact('user'));
+
+        $activities = $user->UserActivity;
+
+        // return $activities;
+        return view('admin.user.edit', compact('user', 'activities'));
     }
 
     public function update(Request $request, User $user)

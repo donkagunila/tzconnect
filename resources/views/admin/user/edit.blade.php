@@ -8,7 +8,7 @@
    <div class="content">
       <div class="container-fluid">
 	      	<div class="row">
-           <div class="col-md-12">
+           <div class="col-md-5">
             <div class="card">
               <div class="card-header card-header-primary card-header-icon">
                <div class="card-icon">
@@ -83,6 +83,50 @@
 
               </div>
 	          </div>
+
+
+            <div class="col-md-7">
+              <div class="card">
+                <div class="card-header card-header-warning card-header-icon">
+                  <div class="card-icon">
+                    <i class="fa fa-info-circle"></i>
+                  </div>
+                  <h4 class="card-title">User Activities</h4>
+                </div>
+
+                <div class="card-body">
+
+                  <div class="material-datatables">
+                    <table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
+                       <thead>
+                                    <tr>
+                                      <th>Title</th>
+                                      <th>Time</th>
+                                     
+                                    </tr>
+                                  </thead>
+                                  <tfoot>
+                                    <tr>
+                                      <th>Username</th>
+                                      <th>Email</th>
+                                    </tr>
+                                  </tfoot>
+                                   <tbody>
+
+                                    @foreach($activities as $activity)
+
+                                    <tr>
+                                      <td>{{ $activity->title }}</td>
+                                      <td>{{ $activity->created_at }}</td>
+                                    </tr>
+
+                                    @endforeach
+                                  </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
          </div>
       </div>
     </div>
