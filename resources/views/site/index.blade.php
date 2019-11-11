@@ -7,26 +7,32 @@
 @section('content')
 	{{-- the landing pge --}}
 
-	<div class="page-header header-filter" data-parallax="true" style="background-image: url({{ asset('assets/site/img/bg2.jpg') }}">
+	<section data-jarallax data-speed=".8" class="pt-12 pb-10 pt-md-15 pb-md-14" style="background-image: url({{ asset('assets/site/img/bg2.jpg') }}">
     <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <h1 class="title">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-8 col-lg-6">
+          <h1 class="display-3 font-weight-bold text-white" id="welcomeHeadingSource">
           	Let's Connect
-          	 <span class="text-warning" data-toggle="typed" data-strings='["Finest Events", "Planners and Vendors", "Everything"]'></span>
+            <br>
+          	 Get <span class="text-warning" data-toggle="typed" data-strings='["Finest Events", "Vendors", "Event Services"]'></span>
           </h1>
-          <h4>
-          	All services and Events in Tanzania right at your finger tips, connect to get the best out of what Tanzania can offer, 
-          	its easy, <br> Explore, locate, Utilize.
-          </h4>
-          <br>
-          <a href="#" target="_blank" class="btn btn-danger btn-raised btn-lg">
-            <i class="fa fa-sign-in"></i> Get Started
-          </a>
+          <p class="font-size-lg text-white-80 mb-6">
+          	Tanzanian Services and Events at your finger tips, one dot to the other 
+          </p>
+          <form>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text pr-0 border-right-0">
+                    <i class="fe fe-search" id="searchAddon"></i>
+                  </span>
+                </div>
+                <input type="search" class="form-control pl-2 border-left-0" placeholder="Services, Events or Vendors.." aria-label="Search for a job" aria-describedby="searchAddon">
+              </div>
+            </form>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
 
 
@@ -623,6 +629,32 @@
 
     </div>
   </div>
+
+
+  <section data-jarallax data-speed=".8" class="py-12 py-md-14 overlay overlay-black overlay-80 jarallax" style="background-image: url({{ asset('assets/site/img/covers/cover-8.jpg') }};">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-1- col-lg-8 text-center">
+            
+            <!-- Heading -->
+            <h1 class="text-white">
+              Want to become a vendor?
+            </h1>
+
+            <!-- Text -->
+            <p class="font-size-lg text-white-80 mb-6 mb-md-8">
+              We welcome service providers to share what they offer, Join to be able to post services and events, lets join forces, let's connect
+            </p>
+
+            <!-- Button -->
+            <a href="#!" class="btn btn-pill btn-primary lift">
+              Become a vendor <i class="fe fe-arrow-right ml-2"></i>
+            </a>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
 
 
 @endsection

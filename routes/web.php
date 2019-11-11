@@ -25,6 +25,11 @@ Route::prefix('/events')->name('event.')->group(function () {
 });
 
 
+Route::prefix('/services')->name('services.')->group(function () {
+    Route::get('/all', 'ServiceController@index')->name('all');
+});
+
+
 
 /* --------------------- Common/User Routes END -------------------------------- */
 

@@ -1,127 +1,194 @@
-<footer class="footer footer-white footer-big mt-50">
-            <div class="container">
-              <div class="content">
-                <div class="row">
-                  <div class="col-md-3">
-                    <a href="#don">
-                      <h5>TzConnect</h5>
-                    </a>
-                    <p>
-                      We connect the best out of every corner and bring right next to your finger tips, let's connect
-                    </p>
-                  </div>
-                  <div class="col-md-2">
-                    <h5>Get To Know us</h5>
-                    <ul class="links-vertical">
-                     {{--  <li>
-                        <a href="{{ route('blog')}}">
-                          Blog
-                        </a>
-                      </li> --}}
-                      <li>
-                        <a href="{{ route('about')}}">
-                          About Us
-                        </a>
-                      </li>
-                      
-                     {{--  <li>
-                        <a href="{{ route('contact')}}">
-                          Contact Us
-                        </a>
-                      </li> --}}
-                    </ul>
-                  </div>
-                {{--   <div class="col-md-2">
-                    <h5>Service and Marketing</h5>
-                    <ul class="links-vertical">
-                      <li>
-                        <a href="#don">
-                          Become a Vendor
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#don">
-                          Return Policy
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#don">
-                          Sell Goods
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#don">
-                          Receive Payment
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </div> --}}
-                  <div class="col-md-3">
-                    <h5>Legal</h5>
-                    <ul class="links-vertical">
-                     {{--  <li>
-                        <a href="#don">
-                          Transactions FAQ
-                        </a>
-                      </li> --}}
-                      <li>
-                        <a href="#don">
-                          Terms &amp; Conditions
-                        </a>
-                      </li>
-                     
-                    </ul>
-                  </div>
-                  <div class="col-md-4">
-                    <h5>Subscribe to Newsletter</h5>
-                    <p>
-                      Join our newsletter and get news in your inbox every week! We hate spam too, so no worries about this.
-                    </p>
-                    <form class="form form-newsletter" method="" action="#">
-                      <div class="form-group bmd-form-group">
-                        <input type="email" class="form-control" placeholder="Your Email...">
-                      </div>
-                      <button type="button" class="btn btn-primary btn-just-icon" name="button">
-                        <i class="material-icons">mail</i>
-                      </button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-              <hr>
-              <ul class="social-buttons">
-                <li>
-                  <a href="#don" class="btn btn-just-icon btn-link btn-twitter">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
+<div class="position-relative">
+      <div class="shape shape-bottom shape-fluid-x svg-shim text-dark">
+        <svg viewBox="0 0 1440 24" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 24H1440V0C722.5 52 0 0 0 0V24Z" fill="currentColor"/>
+        </svg>
 
-                 <li>
-                  <a href="#don" class="btn btn-just-icon btn-link btn-instagram">
-                    <i class="fa fa-instagram"></i>
-                  </a>
-                </li>
+      </div>
+    </div>
 
+ 
 
-                <li>
-                  <a href="#don" class="btn btn-just-icon btn-link btn-facebook">
-                    <i class="fa fa-facebook-square"></i>
-                  </a>
-                </li>
-               
-                
-                <li>
-                  <a href="#don" class="btn btn-just-icon btn-link btn-youtube">
-                    <i class="fa fa-youtube-play"></i>
-                  </a>
-                </li>
-              </ul>
-              <div class="copyright pull-center">
-                Copyright ©
-                <script>
-                  document.write(new Date().getFullYear())
-                </script> Tzconnect
-              </div>
-            </div>
-          </footer>
+ <footer class="py-8 py-md-11 bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-4 col-lg-3">
+        
+            <!-- Brand -->
+            <span class="mb-2 footer-brand text-primary">
+              Tzconnect
+            </span>
+
+            <!-- Text -->
+            <p class="text-gray-700 mb-2">
+              Let's Connect
+            </p>
+
+            <!-- Social -->
+            <ul class="list-unstyled list-inline list-social mb-6 mb-md-0">
+              <li class="list-inline-item list-social-item mr-3">
+                <a href="#!" class="text-decoration-none">
+                  <i class="fe fe-youtube text-danger" class="list-social-icon"></i>
+                </a>
+              </li>
+              <li class="list-inline-item list-social-item mr-3">
+                <a href="#!" class="text-decoration-none">
+                  <i class="fe fe-facebook text-info" class="list-social-icon"></i>
+                  {{-- <img src="assets/siteimg/icons/social/facebook.svg" class="list-social-icon" alt="..."> --}}
+                </a>
+              </li>
+              <li class="list-inline-item list-social-item mr-3">
+                <a href="#!" class="text-decoration-none">
+                  <i class="fe fe-instagram text-primary" class="list-social-icon"></i>
+                </a>
+              </li>
+             
+            </ul>
+
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+        
+            <!-- Heading -->
+            <h6 class="font-weight-bold text-uppercase text-gray-700">
+              Products
+            </h6>
+
+            <!-- List -->
+            <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Page Builder
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  UI Kit
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Styleguide
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Documentation
+                </a>
+              </li>
+              <li>
+                <a href="#!" class="text-reset">
+                  Changelog
+                </a>
+              </li>
+            </ul>
+
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+        
+            <!-- Heading -->
+            <h6 class="font-weight-bold text-uppercase text-gray-700">
+              Services
+            </h6>
+
+            <!-- List -->
+            <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Documentation
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Changelog
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Pagebuilder
+                </a>
+              </li>
+              <li>
+                <a href="#!" class="text-reset">
+                  UI Kit
+                </a>
+              </li>
+            </ul>
+
+          </div>
+          <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
+        
+            <!-- Heading -->
+            <h6 class="font-weight-bold text-uppercase text-gray-700">
+              Connect
+            </h6>
+
+            <!-- List -->
+            <ul class="list-unstyled text-muted mb-0">
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Page Builder
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  UI Kit
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Styleguide
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Documentation
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Changelog
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Documentation
+                </a>
+              </li>
+              <li>
+                <a href="#!" class="text-reset">
+                  Changelog
+                </a>
+              </li>
+            </ul>
+
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+        
+            <!-- Heading -->
+            <h6 class="font-weight-bold text-uppercase text-gray-700">
+              Legal
+            </h6>
+
+            <!-- List -->
+            <ul class="list-unstyled text-muted mb-0">
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Documentation
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Changelog
+                </a>
+              </li>
+              <li>
+                <a href="#!" class="text-reset">
+                  Pagebuilder
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </footer>

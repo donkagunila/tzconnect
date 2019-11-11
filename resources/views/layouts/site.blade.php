@@ -2,28 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport'/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <link rel="icon" type="image/png" href="/assets/logos/favicon.png">
+  <meta name="theme-color" content="#673AB7">
+
+
   <title>
     @yield('title')
   </title>
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
 
+  <meta name="description" content="@yield('description', 'Lets Connect.')">
   <meta name="keywords" content="connect, tanzania, events, food, halls">
-  <meta name="description" content="@yield('description')">
  
   <!--     Fonts and icons     -->
+   <link rel="dns-prefetch" href="//fonts.gstatic.com">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
 
-   {{-- <link rel="dns-prefetch" href="//fonts.gstatic.com"> --}}
-    {{-- <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Roboto&display=swap|Material+Icons" rel="stylesheet"> --}}
+   <link rel="stylesheet" href="{{ asset('assets/site/fonts/Feather/feather.css') }}">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+  {{-- icons --}}
+  <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/logo/favicon.ico')}}" id="main-favicon">
+  <link rel="icon" href="/assets/logos/favicon-16x16.png" sizes="16x16" id="16x16-favicon">
+  <link rel="icon" href="/assets/logos/favicon-32x32.png" sizes="32x32" id="32x32-favicon">
+  <link rel="icon" href="/assets/logos/favicon-96x96.png" sizes="96x96" id="96x96-favicon">
+
+  {{-- stylesheets --}}
+   <link rel="stylesheet" href="{{ asset('assets/site/libs/flickity/dist/flickity.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/site/libs/flickity-fade/flickity-fade.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/site/libs/aos/dist/aos.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/site/libs/jarallax/dist/jarallax.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/site/libs/highlightjs/styles/vs2015.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/site/libs/%40fancyapps/fancybox/dist/jquery.fancybox.min.css') }}">
+
   <link rel="stylesheet" href="{{ asset('assets/site/icofont.min.css')}}">
   <!-- CSS Files -->
-  <link href="{{ asset('assets/site/css/main.css') }}" rel="stylesheet" />
    <link href="{{ asset('assets/site/css/card.css') }}" rel="stylesheet" />
+  <link href="{{ asset('assets/site/css/main.css') }}" rel="stylesheet" />
   
   
 </head>
@@ -39,38 +57,23 @@
   @include('site.inc.footer')
 
 
-  <script src="{{ asset('assets/site/js/core/jquery.min.js') }}" type="text/javascript"></script>
-  <script src="{{ asset('assets/site/js/core/popper.min.js') }}" type="text/javascript"></script>
-  <script src="{{ asset('assets/site/js/core/bootstrap-material-design.min.js') }}" type="text/javascript"></script>
-  <script src="{{ asset('assets/site/js/plugins/moment.min.js') }}"></script>
-  <!--  Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
-  <script src="{{ asset('assets/site/js/plugins/bootstrap-datetimepicker.js') }}" type="text/javascript"></script>
-  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-  <script src="{{ asset('assets/site/js/plugins/nouislider.min.js') }}" type="text/javascript"></script>
-  <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGat1sgDZ-3y6fFe6HD7QUziVC6jlJNog"></script>
+    <script src="{{ asset('assets/site/libs/jquery/dist/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/site/libs/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/site/libs/flickity/dist/flickity.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/site/libs/flickity-fade/flickity-fade.js') }}"></script>
+    <script src="{{ asset('assets/site/libs/aos/dist/aos.js') }}"></script>
+    <script src="{{ asset('assets/site/libs/smooth-scroll/dist/smooth-scroll.min.js') }}"></script>
+    <script src="{{ asset('assets/site/libs/jarallax/dist/jarallax.min.js') }}"></script>
+    <script src="{{ asset('assets/site/libs/jarallax/dist/jarallax-video.min.js') }}"></script>
+    <script src="{{ asset('assets/site/libs/jarallax/dist/jarallax-element.min.js') }}"></script>
+    <script src="{{ asset('assets/site/libs/typed.js/lib/typed.min.js') }}"></script>
+    <script src="{{ asset('assets/site/libs/countup.js/dist/countUp.min.js') }}"></script>
+    <script src="{{ asset('assets/site/libs/highlightjs/highlight.pack.min.js') }}"></script>
+    <script src="{{ asset('assets/site/libs/%40fancyapps/fancybox/dist/jquery.fancybox.min.js') }}"></script>
 
-  <!--  Plugin for Sharrre btn -->
-  <script src="{{ asset('assets/site/js/plugins/jquery.sharrre.js') }}" type="text/javascript"></script>
-  <!--  Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
-  <script src="{{ asset('assets/site/js/plugins/bootstrap-tagsinput.js') }}"></script>
-  <!--  Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
-  <script src="{{ asset('assets/site/js/plugins/bootstrap-selectpicker.js') }}" type="text/javascript"></script>
-  <!--  Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
-  <script src="{{ asset('assets/site/js/plugins/jasny-bootstrap.min.js') }}" type="text/javascript"></script>
-  <!--  Plugin for Small Gallery in Product Page -->
-  <script src="{{ asset('assets/site/js/plugins/jquery.flexisel.js') }}" type="text/javascript"></script>
+    <!-- Map -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 
-  <!-- Place this tag in your head or just before your close body tag. -->
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <!-- Js With initialisations For Demo Purpose, Don't Include it in Your Project -->
-  <script src="{{ asset('assets/site/demo/demo.js') }}" type="text/javascript"></script>
-  <script src="{{ asset('assets/site/js/material-kit.min1036.js') }}" type="text/javascript"></script>
-
-
-   <script>
-    $().ready(function() {
-      materialKitDemo.initContactUsMap();
-    });
-  </script>
+    <!-- Theme JS -->
+    <script src="{{ asset('assets/site/js/theme.min.js') }}"></script>
 </body>
