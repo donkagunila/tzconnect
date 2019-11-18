@@ -50,36 +50,28 @@
         
             <!-- Heading -->
             <h6 class="font-weight-bold text-uppercase text-gray-700">
-              Products
+              Quick links
             </h6>
 
             <!-- List -->
             <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
               <li class="mb-3">
                 <a href="#!" class="text-reset">
-                  Page Builder
+                  Services
                 </a>
               </li>
               <li class="mb-3">
                 <a href="#!" class="text-reset">
-                  UI Kit
+                  Vendors
                 </a>
               </li>
               <li class="mb-3">
                 <a href="#!" class="text-reset">
-                  Styleguide
+                  Events
                 </a>
               </li>
-              <li class="mb-3">
-                <a href="#!" class="text-reset">
-                  Documentation
-                </a>
-              </li>
-              <li>
-                <a href="#!" class="text-reset">
-                  Changelog
-                </a>
-              </li>
+              
+              
             </ul>
 
           </div>
@@ -87,31 +79,27 @@
         
             <!-- Heading -->
             <h6 class="font-weight-bold text-uppercase text-gray-700">
-              Services
+              Organization
             </h6>
 
             <!-- List -->
             <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
               <li class="mb-3">
                 <a href="#!" class="text-reset">
-                  Documentation
+                  About Us
                 </a>
               </li>
               <li class="mb-3">
                 <a href="#!" class="text-reset">
-                  Changelog
+                  Blog
                 </a>
               </li>
               <li class="mb-3">
                 <a href="#!" class="text-reset">
-                  Pagebuilder
+                  FAQs
                 </a>
               </li>
-              <li>
-                <a href="#!" class="text-reset">
-                  UI Kit
-                </a>
-              </li>
+              
             </ul>
 
           </div>
@@ -126,39 +114,15 @@
             <ul class="list-unstyled text-muted mb-0">
               <li class="mb-3">
                 <a href="#!" class="text-reset">
-                  Page Builder
+                  Social media
                 </a>
               </li>
               <li class="mb-3">
                 <a href="#!" class="text-reset">
-                  UI Kit
+                  Contact Us
                 </a>
               </li>
-              <li class="mb-3">
-                <a href="#!" class="text-reset">
-                  Styleguide
-                </a>
-              </li>
-              <li class="mb-3">
-                <a href="#!" class="text-reset">
-                  Documentation
-                </a>
-              </li>
-              <li class="mb-3">
-                <a href="#!" class="text-reset">
-                  Changelog
-                </a>
-              </li>
-              <li class="mb-3">
-                <a href="#!" class="text-reset">
-                  Documentation
-                </a>
-              </li>
-              <li>
-                <a href="#!" class="text-reset">
-                  Changelog
-                </a>
-              </li>
+             
             </ul>
 
           </div>
@@ -173,19 +137,15 @@
             <ul class="list-unstyled text-muted mb-0">
               <li class="mb-3">
                 <a href="#!" class="text-reset">
-                  Documentation
+                  Terms and Condition
                 </a>
               </li>
               <li class="mb-3">
                 <a href="#!" class="text-reset">
-                  Changelog
+                  Privacy Policy
                 </a>
               </li>
-              <li>
-                <a href="#!" class="text-reset">
-                  Pagebuilder
-                </a>
-              </li>
+              
             </ul>
 
           </div>

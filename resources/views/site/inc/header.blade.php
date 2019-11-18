@@ -134,16 +134,14 @@
                           <!-- List -->
                           <ul class="list">
                             <li class="list-item">
-                              <a class="list-link" href="careers.html">
+                              <a class="list-link" href="{{ route('profile')}}">
                                 My profile
                               </a>
                             </li>
                             <li class="list-item">
-                              <a class="dropdown-item" href="#"
+                              <a class="list-link dropdown-item" style="padding-left: 0px;" href="#"
                                       onclick="event.preventDefault();
-                                                      document.querySelector('#logout-form').submit();">
-                                      Logout
-                                  </a>
+                                                      document.querySelector('#logout-form').submit();">Logout</a>
 
                                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                       @csrf

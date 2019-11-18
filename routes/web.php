@@ -11,7 +11,11 @@ Route::get('blog', 'BlogController@index')->name('blog');
 
 Auth::routes([ 'verify' => true ]);
 
-Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
+Route::middleware(['verified'])->group(function () {
+    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/profile', 'ProfileController@index')->name('profile');
+});
+
 
 
 // Events pages routes
