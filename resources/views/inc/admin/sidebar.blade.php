@@ -1,90 +1,8 @@
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-    <form action="{{ route('admin.user.add')}}" method="POST">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Create User</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-          @csrf 
-
-           <div class="form-group">
-              <div class="input-group">
-                 <div class="input-group-prepend">
-                    <span class="input-group-text">
-                        <i class="material-icons">person</i>
-                    </span>
-                  </div>
-                  <input type="text" class="form-control" name="name" id="userName" placeholder="Name" required>
-              </div>
-          </div>
 
 
-          <div class="form-group">
-            <div class="input-group">
-              <div class="input-group-prepend">
-                    <span class="input-group-text">
-                        <i class="material-icons">email</i>
-                    </span>
-                  </div>
-              <input type="email" class="form-control" name="email" id="UserEmail" placeholder="Email Address" required>
-            </div>
-          </div>
 
-
-          <div class="form-group">
-           <div class="input-group">
-              <div class="input-group-prepend">
-                    <span class="input-group-text">
-                        <i class="material-icons">security</i>
-                    </span>
-                  </div>
-            <input type="password" class="form-control" name="password" id="userPassword" placeholder="Password" required>
-          </div>
-          </div>
-          
-           <div class="form-group form-check form-check-radio ml-5 mt-5">
-            
-                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="type" id="exampleRadios1" value="1" checked="true">
-                    Normal User
-                    <span class="circle">
-                        <span class="check"></span>
-                    </span>
-                </label>
-
-                <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="type" id="exampleRadios1" value="2" >
-                    Vendor
-                    <span class="circle">
-                        <span class="check"></span>
-                    </span>
-                </label>
-          
-            
-          </div>
-
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Create User</button>
-      </div>
-    </form>
-    </div>
-  </div>
-</div> 
-
-
- <div class="sidebar" data-color="rose" data-background-color="black" data-image="../assets/img/sidebar-1.jpg">
-      <!--
-        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
-
-        Tip 2: you can also add an image using data-image tag
-      -->
+ <div class="sidebar" data-color="purple" data-background-color="black" data-image="../assets/img/sidebar-1.jpg">
+     
       <div class="logo">
         <a href="{{ route('admin.home')}}" class="simple-text logo-mini">
           TC
@@ -130,7 +48,7 @@
 
 
                 <li class="nav-item ">
-                  <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal">
+                  <a class="nav-link" href="{{ route('admin.user.create')}}" >
                     <span class="sidebar-mini"> AU </span>
                     <span class="sidebar-normal"> Add User</span>
                   </a>
@@ -139,6 +57,53 @@
               </ul>
             </div>
           </li>
+
+
+           <li class="nav-item {{ Request::is('*/service/*') ? 'active' : ''}}">
+            <a class="nav-link" data-toggle="collapse" href="#serviceCollapse">
+              <i class="material-icons">room_service</i>
+              <p> Services
+                <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="serviceCollapse">
+              <ul class="nav">
+                
+                <li class="nav-item ">
+                  <a class="nav-link" href="{{ route('admin.service.transport')}}">
+                    <span class="sidebar-mini"> T </span>
+                    <span class="sidebar-normal"> Transport  </span>
+                  </a>
+                </li>
+
+
+                 <li class="nav-item ">
+                  <a class="nav-link" href="{{ route('admin.service.enternainment')}}">
+                    <span class="sidebar-mini"> E </span>
+                    <span class="sidebar-normal"> Entertainment </span>
+                  </a>
+                </li>
+
+
+                <li class="nav-item ">
+                  <a class="nav-link" href="{{ route('admin.service.mc')}}" >
+                    <span class="sidebar-mini"> M </span>
+                    <span class="sidebar-normal"> Master Ceremonies</span>
+                  </a>
+                </li>
+
+                <li class="nav-item ">
+                  <a class="nav-link" href="{{ route('admin.service.hall')}}" >
+                    <span class="sidebar-mini"> H </span>
+                    <span class="sidebar-normal"> Halls </span>
+                  </a>
+                </li>
+               
+              </ul>
+            </div>
+          </li>
+
+       
 
 
           <li class="nav-item {{ Request::is('*/event/*') ? 'active' : ''}}">
@@ -165,12 +130,6 @@
                   </a>
                 </li>
 
-                {{--  <li class="nav-item ">
-                  <a class="nav-link" href="{{ route('admin.user.list')}}">
-                    <span class="sidebar-mini"> CE </span>
-                    <span class="sidebar-normal"> Create Event </span>
-                  </a>
-                </li> --}}
 
 
                
@@ -179,39 +138,94 @@
             </div>
           </li>
 
+          <li class="nav-item {{ Request::is('*/servie/*') ? 'active' : ''}}">
+            <a class="nav-link" href="{{ route('admin.service.all')}}">
+              <i class="material-icons">room_service</i>
+              <p> Service Requests </p>
+            </a>
+          </li>
 
-          {{--   <li class="nav-item {{ Request::is('*/event/*') ? 'active' : ''}}">
-            <a class="nav-link" data-toggle="collapse" href="#eventsDropdown">
-              <i class="material-icons">grain</i>
-              <p> Services
+
+          <li class="nav-item {{ Request::is('*/servce/*') ? 'active' : ''}}">
+            <a class="nav-link" href="{{ route('admin.service.all')}}">
+              <i class="material-icons">contact_support</i>
+              <p> Subscriptions </p>
+            </a>
+          </li>
+
+
+            <li class="nav-item {{ Request::is('*/sevice/*') ? 'active' : ''}}">
+            <a class="nav-link" href="{{ route('admin.service.all')}}">
+              <i class="material-icons">chat</i>
+              <p> Contacts </p>
+            </a>
+          </li>
+
+          <li class="nav-item {{ Request::is('*/servie/*') ? 'active' : ''}}">
+            <a class="nav-link" href="{{ route('admin.service.all')}}">
+              <i class="material-icons">image</i>
+              <p> Images </p>
+            </a>
+          </li>
+
+            <li class="nav-item {{ Request::is('*/email/*') ? 'active' : ''}}">
+            <a class="nav-link" href="{{ route('admin.service.all')}}">
+              <i class="material-icons">email</i>
+              <p> Email </p>
+            </a>
+          </li>
+
+
+           <li class="nav-item {{ Request::is('*/pages/*') ? 'active' : ''}}">
+            <a class="nav-link" data-toggle="collapse" href="#pageCollapse">
+              <i class="material-icons">pageview</i>
+              <p> Pages
                 <b class="caret"></b>
               </p>
             </a>
-            <div class="collapse" id="eventsDropdown">
+            <div class="collapse" id="pageCollapse">
               <ul class="nav">
                 
                 <li class="nav-item ">
-                  <a class="nav-link" href="{{ route('admin.service.all')}}">
-                    <span class="sidebar-mini"> EC </span>
-                    <span class="sidebar-normal">All Services </span>
+                  <a class="nav-link" href="{{ route('admin.service.transport')}}">
+                    <span class="sidebar-mini"> AU </span>
+                    <span class="sidebar-normal"> About Us  </span>
                   </a>
                 </li>
 
 
                  <li class="nav-item ">
-                  <a class="nav-link" href="{{ route('admin.user.list')}}">
-                    <span class="sidebar-mini"> CE </span>
-                    <span class="sidebar-normal"> Create Event </span>
+                  <a class="nav-link" href="{{ route('admin.service.enternainment')}}">
+                    <span class="sidebar-mini"> CU </span>
+                    <span class="sidebar-normal"> Contact Us </span>
                   </a>
                 </li>
 
 
-               
+                <li class="nav-item ">
+                  <a class="nav-link" href="{{ route('admin.service.mc')}}" >
+                    <span class="sidebar-mini"> TC </span>
+                    <span class="sidebar-normal"> Terms and Conditions</span>
+                  </a>
+                </li>
+
+                <li class="nav-item ">
+                  <a class="nav-link" href="{{ route('admin.service.hall')}}" >
+                    <span class="sidebar-mini"> P </span>
+                    <span class="sidebar-normal"> Policy </span>
+                  </a>
+                </li>
                
               </ul>
             </div>
           </li>
-          --}}
+
+
+
+
+
+
+          
         </ul>
       </div>
     </div>

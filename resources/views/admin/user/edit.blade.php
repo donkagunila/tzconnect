@@ -20,7 +20,7 @@
 
                 <div class="card-body">
                   
-                  <form action="{{ route('admin.user.update', $user->id)}}" method="POST">
+                  <form action="{{ route('admin.user.update', $user->username)}}" method="POST">
                    
                     <div class="modal-body">
                         @csrf 
@@ -32,7 +32,7 @@
                                       <i class="material-icons">person</i>
                                   </span>
                                 </div>
-                                <input type="text" class="form-control" name="name" id="userName" value="{{ $user->name }}" placeholder="Name" required>
+                                <input type="text" class="form-control" name="username" id="userName" value="{{ $user->username }}" placeholder="Username" required>
                             </div>
                         </div>
 
@@ -72,6 +72,35 @@
                         </div>
 
 
+                        <div>
+                          <hr>
+                          <h4>
+                            User Status
+                          </h4>
+
+                           <div class="form-group form-check form-check-radio ml-5 mt-5">
+                          
+                               <label class="form-check-label">
+                                  <input class="form-check-input" type="radio" name="status" id="exampleRadios1" value="1" {{ $user->status != 2 ? 'checked' : ''}}>
+                                  Active
+                                  <span class="circle">
+                                      <span class="check"></span>
+                                  </span>
+                              </label>
+
+                              <label class="form-check-label">
+                                  <input class="form-check-input" type="radio" name="status" id="exampleRadios1" value="2" {{ $user->status === 2 ? 'checked' : ''}}>
+                                  Inactive
+                                  <span class="circle">
+                                      <span class="check"></span>
+                                  </span>
+                              </label>
+                        
+                          
+                        </div>
+                        </div>
+
+
                     </div>
                     <div class="modal-footer">
                       <a class="btn btn-secondary" href="{{ route('admin.user.list')}}" >cancel</a>
@@ -105,19 +134,20 @@
                                      
                                     </tr>
                                   </thead>
-                                  <tfoot>
-                                    <tr>
-                                      <th>Username</th>
-                                      <th>Email</th>
-                                    </tr>
-                                  </tfoot>
+
                                    <tbody>
 
                                     @foreach($activities as $activity)
 
                                     <tr>
                                       <td>{{ $activity->title }}</td>
-                                      <td>{{ $activity->created_at }}</td>
+                                      <td 
+                                        class="date-field" 
+                                        data-toggle="tooltip" 
+                                        data-placement="top" 
+                                        title="{{ $activity->created_at->toDateTimeString()}}">
+                                          {{ $activity->created_at->diffForHumans(null, true, true) }}
+                                        </td>
                                     </tr>
 
                                     @endforeach

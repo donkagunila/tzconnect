@@ -139,7 +139,7 @@
                               </a>
                             </li>
                             <li class="list-item">
-                              <a class="list-link dropdown-item" style="padding-left: 0px;" href="#"
+                              <a class="list-link dropdown-item" style="padding-left: 0px    ;" href="#"
                                       onclick="event.preventDefault();
                                                       document.querySelector('#logout-form').submit();">Logout</a>
 

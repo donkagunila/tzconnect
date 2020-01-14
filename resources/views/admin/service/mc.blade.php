@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'User List | Admin')
+@section('title', 'Mc List | Admin')
 
 @section('content')
 
@@ -12,9 +12,9 @@
 				<div class="card">
 					<div class="card-header card-header-primary card-header-icon">
 					 <div class="card-icon">
-	                    <i class="material-icons">people</i>
+	                    <i class="material-icons">music</i>
 	                  </div>
-	                  <h4 class="card-title">All Users</h4>
+	                  <h4 class="card-title">All MC Services</h4>
 					</div>
 
 
@@ -31,8 +31,8 @@
 								 <thead>
 			                        <tr>
 			                          <th>Username</th>
-			                          <th>Email</th>
-			                          <th>Role</th>
+			                          <th>Title</th>
+			                          <th>Price</th>
 			                          <th>Registered</th>
 			                          <th>Status</th>
 			                          <th class="disabled-sorting text-right">Actions</th>
@@ -41,8 +41,8 @@
 			                      <tfoot>
 			                        <tr>
 			                          <th>Username</th>
-			                          <th>Email</th>
-			                          <th>Role</th>
+			                          <th>Title</th>
+			                          <th>Price</th>
 			                          <th>Registered</th>
 			                          <th>Status</th>
 			                          <th class="text-right">Actions</th>
@@ -50,17 +50,9 @@
 			                      </tfoot>
 			                       <tbody>
 
-			                       	@foreach($users as $user)
+			                       	@foreach($mcs as $mc)
 				                        <tr>
-				                          <td>{{ $user->username}}</td>
-				                          <td>{{ $user->email }}</td>
-				                          <td>{{ App\User::checktype($user->type) }}</td>
-				                          <td>{{ $user->created_at->toFormattedDateString() }}</td>
-				                          <td>{{ App\User::checkstatus($user->status) }}</td>
-				                          <td class="text-right">
-				                            <a href="{{ route('admin.user.edit', $user->username)}}" class="btn btn-link btn-warning btn-just-icon edit"><i class="material-icons">edit</i></a>
-				                            {{-- <a href="#" class="btn btn-link btn-danger btn-just-icon remove"><i class="material-icons">close</i></a> --}}
-				                          </td>
+				                          
 				                        </tr>
 				                     @endforeach
 				                    </tbody>

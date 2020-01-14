@@ -104,14 +104,33 @@
       <script src="{{ asset('assets/js/plugins/bootstrap-notify.js') }}"></script>
       <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
       <script src="{{ asset('assets/js/material-dashboard.minf066.js?v=2.1.0') }}" type="text/javascript"></script>
+
+
+
+
+
+       <script src="{{ asset('assets/js/wysihtml5-0.3.0.js') }}"></script>
+  <script src="{{ asset('assets/js/bootstrap-wysihtml5.js')}} "></script>
+
+    <script>
+    $(document).ready(function() {
+
+        $('.textarea_editor').wysihtml5();
+
+
+    });
+    </script>
    
 
     <script>
         //close the alert after 3 seconds.
         $(document).ready(function(){
-			setTimeout(function() {
-	        	$(".alert").alert('close');
-	    	}, 3000);
+
+           $('[data-toggle="tooltip"]').tooltip()
+           
+    			setTimeout(function() {
+    	        	$(".alert").alert('close');
+    	    	}, 3000);
     	});
 
          $(document).ready(function() {
@@ -150,6 +169,23 @@
       });
     });
     </script>
+
+     @if(session('success'))
+          <script>
+            $(document).ready(function () {
+              var message = "{{ session('success') }}";
+                $.notify({
+                  // options
+                  message: message,
+                  icon: "done",
+                },{
+                  // settings
+                  type: 'success',
+                  timer: 3e3,
+                });
+            });
+          </script>
+        @endif
     
 </body>
 </html>

@@ -24,12 +24,17 @@ class UserController extends Controller
     	return view('admin.user.index', compact('users'));
     }
 
-    public function create(Request $request)
+    public function create()
+    {
+        return view('admin.user.create');
+    }
+
+    public function save(Request $request)
     {
     	// return view('admin.user.create');
 
     	$user = User::create([
-    		'name' => request('name'),
+    		'username' => request('username'),
     		'email' => request('email'),
     		'password'=> Hash::make(request('password')),
     		'type' => request('type'),
@@ -37,25 +42,48 @@ class UserController extends Controller
 
         UserActivity::addActivity($user->id, 'User Created');
 
+        $request->session()->flash('success', 'User Created successfully');
+
     	return redirect()->back();
     }
 
-    public function edit(User $user)
+    public function edit($username)
     {
 
-        $activities = $user->UserActivity;
+        $user = User::where('username', $username)->get()->first();
+
+        if ($user) {
+
+            $activities = $user->UserActivity;
+            return view('admin.user.edit', compact('user', 'activities'));
+            
+        } else {
+
+            abort(404);
+        }
+
+        // return $user;
+
 
         // return $activities;
-        return view('admin.user.edit', compact('user', 'activities'));
     }
 
-    public function update(Request $request, User $user)
+    public function update(Request $request, $username)
     {
+        $user = User::where('username', $username)->get()->first();
+
+        // return $request->all();
+
         $user->update([
-            'name' => request('name'),
+            'username' => request('username'),
             'email' => request('email'),
-            'type' => request('type')
+            'type' => request('type'),
+            'status' => request('status')
         ]);
+
+         UserActivity::addActivity($user->id, 'User Updated');
+
+        $request->session()->flash('success', 'Success, User updated successfully');
 
         return redirect()->back();
     }
