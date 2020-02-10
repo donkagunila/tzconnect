@@ -9,34 +9,34 @@ Route::get('/', 'SiteController@index')->name('index');
 
 
 
-// Route::get('/about-us', 'SiteController@about')->name('about');
-// Route::get('/contact-us', 'SiteController@contact')->name('contact');
+Route::get('/about-us', 'SiteController@about')->name('about');
+Route::get('/contact-us', 'SiteController@contact')->name('contact');
 
-// Route::get('blog', 'BlogController@index')->name('blog');
+Route::get('blog', 'BlogController@index')->name('blog');
 
-// Auth::routes([ 'verify' => true ]);
+Auth::routes([ 'verify' => true ]);
 
-// Route::middleware(['verified'])->group(function () {
-//     Route::get('/home', 'HomeController@index')->name('home');
-//     Route::get('/profile', 'ProfileController@index')->name('profile');
-// });
+Route::middleware(['verified'])->group(function () {
+    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/profile', 'ProfileController@index')->name('profile');
+});
 
 
 
 // Events pages routes
-// Route::prefix('/events')->name('event.')->group(function () {
+Route::prefix('/events')->name('event.')->group(function () {
 
-//     Route::get('/weddings', 'EventController@weddings')->name('weddings');
-//     Route::get('/seminars', 'EventController@seminars')->name('seminars');
-//     Route::get('/concerts', 'EventController@concerts')->name('concerts');
-//     Route::get('/all', 'EventController@all')->name('all');
+    Route::get('/weddings', 'EventController@weddings')->name('weddings');
+    Route::get('/seminars', 'EventController@seminars')->name('seminars');
+    Route::get('/concerts', 'EventController@concerts')->name('concerts');
+    Route::get('/all', 'EventController@all')->name('all');
 
-// });
+});
 
 
-// Route::prefix('/services')->name('services.')->group(function () {
-//     Route::get('/all', 'ServiceController@index')->name('all');
-// });
+Route::prefix('/services')->name('services.')->group(function () {
+    Route::get('/all', 'ServiceController@index')->name('all');
+});
 
 
 

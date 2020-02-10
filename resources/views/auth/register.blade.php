@@ -1,19 +1,31 @@
-@extends('layouts.auth')
+@extends('layouts.site')
 
 @section('content')
-<div class="wrapper wrapper-full-page">
-    <div class="page-header register-page header-filter" filter-color="black" style="background-image: url('../../assets/img/register.jpg')">
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
+
+<section>
+    <div class="wrapper">
+        <div class="row no-gutters justify-content-between align-items-center min-vh-100 min-vh-100-ie-hack">
+            <div class="col-12 col-md-5 align-self-stretch">
+
+            <!-- Image (mobile) -->
+                <img src="{{ asset('assets/site/img/photos/photo-5.jpg') }}" class="d-md-none img-cover" alt="...">
+
+                <!-- Image -->
+                <div class="d-none d-md-block vw-50 h-100 float-right bg-cover" style="background-image: url({{ asset('assets/img/photos/ph1.jpg') }});"></div>
+
+              </div>
+
+
+            <div class="col-12 col-md-6 py-8 py-md-11">
+            
                 
-                    <h2 class="card-title text-center mt-10">
+                    <h2 class="font-weight-bold text-center mb-1">
                         {{ __('Register') }}
                     </h2>
 
+                      <hr class="hr-sm my-4 my-md-6 border-gray-300">
 
-                <div class="card-body">
+                
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -75,11 +87,13 @@
                             </div>
                         </div>
                     </form>
-                </div>
+                
             </div>
+    
+
         </div>
     </div>
-</div>
-</div>
-</div>
+</section>
+
+
 @endsection
