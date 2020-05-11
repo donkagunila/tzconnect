@@ -44,7 +44,7 @@ Route::prefix('/services')->name('services.')->group(function () {
 
 /* ----------------------- Admin Routes START -------------------------------- */
 
-// Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function(){
+Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function(){
     
     /**
      * Admin Auth Route(s)
@@ -103,17 +103,17 @@ Route::prefix('/services')->name('services.')->group(function () {
 
 
 //     // user routes
-//     Route::prefix('user')->group(function ()
-//     {
-//        Route::get('list', 'UserController@index')->name('user.list');
-//         Route::get('create', 'UserController@create')->name('user.create');
-//        Route::post('add', 'UserController@save')->name('user.add');
-//        Route::get('edit/{user}', 'UserController@edit')->name('user.edit');
-//        Route::post('update/{user}', 'UserController@update')->name('user.update');
+     Route::prefix('user')->group(function ()
+    {
+        Route::get('list', 'UserController@index')->name('user.list');
+        Route::get('create', 'UserController@create')->name('user.create');
+        Route::post('add', 'UserController@save')->name('user.add');
+        Route::get('edit/{user}', 'UserController@edit')->name('user.edit');
+        Route::post('update/{user}', 'UserController@update')->name('user.update');
        
-//         Route::get('vendors', 'UserController@vendors')->name('user.vendors');
-//     });
+         Route::get('vendors', 'UserController@vendors')->name('user.vendors');
+     });
 
-// });
+});
 
 /* ----------------------- Admin Routes END -------------------------------- */

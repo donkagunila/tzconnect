@@ -1,81 +1,90 @@
-@extends('layouts.site')
+@extends('layouts.auth')
 
-@section('title', 'Login | Tzconnect')
+@section('title', 'Login')
 
 @section('content')
 
-<section>
-    <div class="container">
-        <div class="row no-gutters justify-content-between align-items-center min-vh-100 min-vh-100-ie-hack">
-            <div class="col-12 col-md-5 align-self-stretch">
+<section class="section-border border-primary">'
 
-            <!-- Image (mobile) -->
-                <img src="{{ asset('assets/site/img/photos/photo-5.jpg') }}" class="d-md-none img-cover" alt="...">
+     <div class="container d-flex flex-column">
+        <div class="row align-items-center justify-content-center no-gutters min-vh-100">
+            
 
-                <!-- Image -->
-                <div class="d-none d-md-block vw-50 h-100 float-right bg-cover" style="background-image: url({{ asset('assets/img/photos/ph1.jpg') }});"></div>
+            <div class="col-12 col-md-5 col-lg-4 py-8 py-md-11">
+            
+                
+                   <!-- Heading -->
+                <h1 class="mb-4 font-weight-bold text-center">
+                  Login
+                </h1>
 
-              </div>
+                 <!-- Text -->
+                <p class="mb-6 text-center text-muted">
+                  Welcome back, Login to proceed.
+                </p>
 
-               <div class="col-12 col-md-6 py-8 py-md-11">
-                 <!-- Heading -->
-                    <h2 class="font-weight-bold text-center mb-1">
-                      Login.
-                    </h2>
 
-                     <hr class="hr-sm my-4 my-md-6 border-gray-300">
 
-                      <form method="POST" action="{{ route($loginRoute) }}">
+
+                      <form class="mb-6" method="POST" action="{{ route($loginRoute) }}">
                         @csrf
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-12 col-form-label">{{ __('E-Mail Address') }}</label>
+                        <div class="form-group">
+                            <label for="email" >{{ __('E-Mail Address') }}</label>
 
-                            <div class="col-md-12">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                            
+                                <input id="email" 
+                                       type="email" 
+                                       class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" 
+                                       name="email" 
+                                       value="{{ old('email') }}" 
+                                       placeholder="hello@domain.com" 
+                                       required autofocus>
 
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                 @endif
-                            </div>
+                            
                         </div>
 
-                            <div class="form-group row">
-                                <label for="password" class="col-md-12 col-form-label">{{ __('Password') }}</label>
+                            <div class="form-group">
+                                <label for="password" >{{ __('Password') }}</label>
 
-                                <div class="col-md-12">
-                                    <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                                
+                                    <input id="password" 
+                                           type="password" 
+                                           class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" 
+                                           name="password" 
+                                           placeholder="Enter your password"  required>
 
                                     @if ($errors->has('password'))
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $errors->first('password') }}</strong>
                                         </span>
                                     @endif
-                                </div>
+                                
                             </div>
 
-                         
-
-                            <div class="form-group row mb-0">
-                                <div class="col-md-12">
-                                    <button type="submit" class="btn btn-primary">
+                                    <button type="submit" class="btn btn-block btn-primary">
                                         {{ __('Login') }}
                                     </button>
+                         
 
                                     @if (Route::has('password.request'))
-                                        <a class="btn btn-link" href="{{ route($forgotPasswordRoute) }}">
-                                            {{ __('Forgot Your Password?') }}
+                                        <a class="btn btn-link small-text" href="{{ route($forgotPasswordRoute) }}">
+                                            <span class="mb-0 font-size-sm text-center">{{ __('Forgot Your Password?') }}</span>
                                         </a>
                                     @endif
-                                </div>
-                            </div>
+                           
+
+                               
 
 
                             <div class="mb-5 mt-5">
                                 <hr>
-                                <div class="text-center text-small">
+                                <div class="mb-0 font-size-sm text-center text-muted">
                                     Don't have an account ?<a href="{{ route('register') }}"> Register</a>
                                 </div>
                             </div>
